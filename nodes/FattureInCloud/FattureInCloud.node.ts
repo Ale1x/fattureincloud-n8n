@@ -690,18 +690,36 @@ export class FattureInCloud implements INodeType {
 				);
 
 				returnData.push(...executionData);
-			} catch (error) {
+			} catch (error: any) {
+				// Extract more detailed error information
+				const errorMessage = error.response?.data?.error?.validation_result || 
+								   error.response?.data?.error_description || 
+								   error.response?.data?.message || 
+								   error.message || 
+								   'Unknown error';
+				
+				const errorDetails = {
+					message: errorMessage,
+					status: error.response?.status,
+					statusText: error.response?.statusText,
+					data: error.response?.data,
+				};
+
 				if (this.continueOnFail()) {
 					const executionErrorData = this.helpers.constructExecutionMetaData(
-						this.helpers.returnJsonArray({ error: error.message }),
+						this.helpers.returnJsonArray({ error: errorDetails }),
 						{ itemData: { item: i } },
 					);
 					returnData.push(...executionErrorData);
 					continue;
 				}
-				throw new NodeOperationError(this.getNode(), error, {
+				
+				// Create a more informative error
+				const nodeError = new NodeOperationError(this.getNode(), `Fatture in Cloud API Error: ${errorMessage}`, {
 					itemIndex: i,
+					description: `Status: ${error.response?.status || 'Unknown'}, Details: ${JSON.stringify(error.response?.data || {})}`,
 				});
+				throw nodeError;
 			}
 		}
 
