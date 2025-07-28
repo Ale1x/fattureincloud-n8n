@@ -544,9 +544,9 @@ export class FattureInCloud implements INodeType {
 		const resource = this.getNodeParameter('resource', 0);
 		const operation = this.getNodeParameter('operation', 0);
 
-		const credentials = await this.getCredentials('fattureInCloudOAuth2Api');
+		const credentials = await this.getCredentials('fattureInCloudOAuth2Api') as any;
 		const config = new Configuration({
-			accessToken: credentials.accessToken as string,
+			accessToken: credentials.oauthTokenData?.access_token || credentials.accessToken as string,
 		});
 
 		for (let i = 0; i < length; i++) {
