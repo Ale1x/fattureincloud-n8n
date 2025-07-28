@@ -17,7 +17,7 @@ import { SuppliersModule } from './modules/SuppliersModule';
 // Import interfaces
 import { IFattureInCloudModule } from './interfaces';
 
-export class FattureInCloudModular implements INodeType {
+export class FattureInCloud implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Fatture in Cloud',
 		name: 'fattureInCloud',
