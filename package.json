@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-fatture-in-cloud",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node for Fatture in Cloud integration using the official TypeScript SDK",
   "keywords": [
     "n8n-community-node-package",

@@ -31,7 +31,7 @@ export class FattureInCloudOAuth2Api implements ICredentialType {
 			displayName: 'Scope',
 			name: 'scope',
 			type: 'hidden',
-			default: 'entity.clients:a entity.suppliers:a entity.products:a issued_documents.invoices:a issued_documents.credit_notes:a issued_documents.receipts:a issued_documents.orders:a issued_documents.quotes:a issued_documents.proformas:a issued_documents.delivery_notes:a issued_documents.work_reports:a issued_documents.supplier_orders:a issued_documents.self_invoices:a received_documents:a stock:a receipts:a taxes:a archive:a cashbook:a settings:a situation:a',
+			default: 'situation:r entity.clients:a entity.suppliers:a products:a stock:a issued_documents.invoices:a issued_documents.credit_notes:a issued_documents.quotes:a issued_documents.proformas:a issued_documents.receipts:a issued_documents.delivery_notes:a issued_documents.orders:a issued_documents.work_reports:a issued_documents.supplier_orders:a issued_documents.self_invoices:a received_documents:a receipts:a calendar:a archive:a taxes:a cashbook:a settings:a',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',
