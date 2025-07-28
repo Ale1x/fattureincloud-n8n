@@ -1,19 +1,28 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "@ale1x/fattureincloud-n8n",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n community node for Fatture in Cloud integration using the official TypeScript SDK",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "fatture-in-cloud",
+    "invoicing",
+    "accounting",
+    "italy",
+    "automation",
+    "workflow"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/Ale1x/fattureincloud-n8n#readme",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Alessandro",
+    "email": "developer@example.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/Ale1x/fattureincloud-n8n.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "engines": {
     "node": ">=20.15"
@@ -34,22 +43,28 @@
     "n8nNodesApiVersion": 1,
     "credentials": [
       "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/HttpBinApi.credentials.js",
+      "dist/credentials/FattureInCloudOAuth2Api.credentials.js"
     ],
     "nodes": [
       "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/HttpBin/HttpBin.node.js",
+      "dist/nodes/FattureInCloud/FattureInCloud.node.js"
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "~8.32.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "~8.32.1",
+    "eslint": "^8.57.1",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
-    "gulp": "^5.0.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "gulp": "^5.0.1",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "@fattureincloud/fattureincloud-ts-sdk": "^2.1.1"
   }
 }
