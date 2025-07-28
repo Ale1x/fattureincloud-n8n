@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-fatture-in-cloud",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "n8n community node for Fatture in Cloud integration using the official TypeScript SDK",
   "keywords": [
     "n8n-community-node-package",
@@ -42,7 +42,7 @@
       "dist/credentials/FattureInCloudOAuth2Api.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/FattureInCloud/FattureInCloudModular.node.js"
+      "dist/nodes/FattureInCloud/FattureInCloud.node.js"
     ]
   },
   "devDependencies": {

@@ -19,15 +19,15 @@ import { IFattureInCloudModule } from './interfaces';
 
 export class FattureInCloudModular implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Fatture in Cloud (Modular)',
-		name: 'fattureInCloudModular',
+		displayName: 'Fatture in Cloud',
+		name: 'fattureInCloud',
 		icon: 'file:fic.svg',
 		group: ['productivity'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with Fatture in Cloud API using modular architecture',
+		description: 'Interact with Fatture in Cloud API',
 		defaults: {
-			name: 'Fatture in Cloud (Modular)',
+			name: 'Fatture in Cloud',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
