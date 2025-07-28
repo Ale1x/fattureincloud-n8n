@@ -1,5 +1,5 @@
 {
-  "name": "@ale1x/fattureincloud-n8n",
+  "name": "n8n-nodes-fatture-in-cloud",
   "version": "0.1.0",
   "description": "n8n community node for Fatture in Cloud integration using the official TypeScript SDK",
   "keywords": [
@@ -20,9 +20,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Ale1x/fattureincloud-n8n.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "engines": {
     "node": ">=20.15"
